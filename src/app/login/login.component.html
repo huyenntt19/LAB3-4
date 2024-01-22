@@ -1,0 +1,37 @@
+<form action="" [formGroup] = "loginForm">
+    <div >
+        <label for="" >Ho ten</label>
+        <input type="text" class="form-control" formControlName="hoTen">
+        <div *ngIf = "!loginForm.controls.hoTen.valid&&(loginForm.controls.hoTen.dirty||loginForm.controls.hoTen.touched)">
+            <p>Ho Ten sai cu phap</p>
+        </div>
+    </div>
+    <div>
+        <label for="" >Dia chi</label>
+        <input type="text" class="form-control" formControlName="diaChi">
+    </div>
+    <div>
+        <label for="" >So dien thoai</label>
+        <input type="text" class="form-control" formControlName="soDienThoai">
+        <div *ngIf = "!loginForm.controls.soDienThoai.valid&&(loginForm.controls.soDienThoai.dirty||loginForm.controls.soDienThoai.touched)">
+            <p>So dien thoai sai cu phap</p>
+        </div>
+    </div>
+    <div>
+        <label for="" >Email</label>
+        <input type="email" class="form-control" formControlName="email">
+        <div *ngIf = "!loginForm.controls.email.valid&&(loginForm.controls.email.dirty||loginForm.controls.email.touched)">
+            <p>Email sai cu phap</p>
+        </div>
+    </div>
+    <div>
+        <label for="" >CMND</label>
+        <input type="text" class="form-control" formControlName="cmnd">
+        <div *ngIf = "!loginForm.controls.cmnd.valid&&(loginForm.controls.cmnd.dirty||loginForm.controls.cmnd.touched)">
+            <p>CMND sai cu phap</p>
+        </div>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary" [disabled]="!isFormValid()" >Dang nhap</button>
+    </div>
+</form>
